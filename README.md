@@ -6,7 +6,7 @@ This project is an end-to-end pipeline that automates the extraction of structur
 
 
 
-## ## Workflow Architecture
+Workflow Architecture
 
 The application follows a simple, robust pipeline for processing each document:
 
@@ -14,7 +14,7 @@ The application follows a simple, robust pipeline for processing each document:
 Image Upload --> FastAPI Server --> OCR (Pytesseract) --> Custom NER Model (spaCy) --> Structured JSON Output
 ```
 
-## ## Key Features
+Key Features
 
 -   **Automated Text Extraction:** Uses Pytesseract for Optical Character Recognition (OCR) to extract raw text from image-based invoices.
 -   **Custom NLP Model:** Features a custom Named Entity Recognition (NER) model built with spaCy, trained specifically to identify key entities on invoices.
@@ -22,7 +22,7 @@ Image Upload --> FastAPI Server --> OCR (Pytesseract) --> Custom NER Model (spaC
 -   **End-to-End Pipeline:** Demonstrates a complete machine learning project lifecycle from data annotation and model training to deployment as a microservice.
 
 ---
-## ## Tech Stack
+Tech Stack
 
 -   **Backend:** FastAPI
 -   **Server:** Uvicorn
@@ -32,43 +32,43 @@ Image Upload --> FastAPI Server --> OCR (Pytesseract) --> Custom NER Model (spaC
 -   **Core Language:** Python 3.11+
 
 ---
-## ## Setup and Installation
+Setup and Installation
 
 Follow these steps to set up the project locally.
 
-**1. Clone the Repository**
+1. Clone the Repository**
 ```bash
 git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
 cd your-repo-name
 ```
 
-**2. Install Tesseract OCR**
+2. Install Tesseract OCR**
 You must install Google's Tesseract engine on your system. Follow the instructions for your OS:
 -   [Tesseract Installation Guide](https://github.com/tesseract-ocr/tesseract/wiki)
 
-**3. Create a Virtual Environment (Recommended)**
+3. Create a Virtual Environment (Recommended)**
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 ```
 
-**4. Install Dependencies**
+4. Install Dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
-## ## Usage
+Usage
 
 The project is split into two main steps: training the model and running the API.
 
-**1. Train the Custom NER Model**
+1. Train the Custom NER Model**
 Run the training script. This will create the `my_invoice_model` directory containing your trained model.
 ```bash
 python custom_ner_training.py
 ```
 
-**2. Run the API Server**
+2. Run the API Server**
 Start the FastAPI application using Uvicorn.
 ```bash
 uvicorn main:app --reload
@@ -76,7 +76,7 @@ uvicorn main:app --reload
 The API will now be running at `http://127.0.0.1:8000`.
 
 ---
-## ## API Endpoint
+API Endpoint
 
 You can test the API using the interactive documentation provided by FastAPI.
 
